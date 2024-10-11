@@ -29,7 +29,7 @@ add_action('init', function(){
 			['html'=>SIM\pageSelect('page-selector')]
 		);
 
-		$plugins['insert_embed_shortcode']		= plugins_url("js/tiny_mce.js?ver=".MODULE_VERSION, __DIR__);
+		$plugins['insert_embed_shortcode']		= SIM\pathToUrl(MODULE_PATH."js/tiny_mce.js?ver=".MODULE_VERSION);
 
 		return $plugins;
 	},999);
