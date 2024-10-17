@@ -1,6 +1,5 @@
 import { __ } from '@wordpress/i18n';
 import {useBlockProps, InspectorControls} from "@wordpress/block-editor";
-import './editor.scss';
 import {useState, useEffect} from "@wordpress/element";
 import {TextControl,PanelBody, Spinner} from "@wordpress/components";
 import { useSelect } from '@wordpress/data';
