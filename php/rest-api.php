@@ -9,24 +9,7 @@ add_action( 'rest_api_init', function () {
         '/find',
         array(
             'methods'               => 'POST,GET',
-            'callback'              => function($wpRequest){
-                $search = $wpRequest->get_param('search');
-
-                if(strlen($search) < 3){
-                    return [];
-                }
-
-                $args = array(
-                    'post_status'       => 'publish',
-                    'post_type'         => 'any',
-                    's'                 => $search,
-                    'posts_per_page'    => -1
-                );
-        
-                $wpQuery  = new \WP_Query( $args );
-
-                return $wpQuery->posts;
-            },
+            'callback'              => __NAMESPACE__.'\findPosts',
             'permission_callback'   => '__return_true',
             'args'					=> array(
 				'search'	=> array(
@@ -41,13 +24,7 @@ add_action( 'rest_api_init', function () {
         '/result',
         array(
             'methods'               => 'POST,GET',
-            'callback'              => function($wpRequest){
-                $id             = $wpRequest->get_param('id');
-                $collapsible    = $wpRequest->get_param('collapsible');
-                $linebreak      = $wpRequest->get_param('linebreak');
-
-                return displayPageContents($id, $collapsible, $linebreak);
-            },
+            'callback'              => __NAMESPACE__.'\showPost',
             'permission_callback'   => '__return_true',
             'args'					=> array(
 				'id'	=> array(
@@ -60,3 +37,30 @@ add_action( 'rest_api_init', function () {
 		)
 	);
 });
+
+function findPosts($wpRequest){
+    $search = $wpRequest->get_param('search');
+
+    if(strlen($search) < 3){
+        return [];
+    }
+
+    $args = array(
+        'post_status'       => 'publish',
+        'post_type'         => 'any',
+        's'                 => $search,
+        'posts_per_page'    => -1
+    );
+
+    $wpQuery  = new \WP_Query( $args );
+
+    return $wpQuery->posts;
+}
+
+function showPost($wpRequest){
+    $id             = $wpRequest->get_param('id');
+    $collapsible    = $wpRequest->get_param('collapsible');
+    $linebreak      = $wpRequest->get_param('linebreak');
+
+    return displayPageContents($id, $collapsible, $linebreak);
+}
