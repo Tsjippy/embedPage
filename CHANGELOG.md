@@ -4,6 +4,15 @@
 ### Added
 
 ### Changed
+
+### Fixed
+
+### Updated
+
+## [8.0.3] - 2024-11-19
+
+
+### Changed
 - removed anomynous functions
 
 ### Fixed
