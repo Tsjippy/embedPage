@@ -2,7 +2,8 @@
 namespace SIM\EMBEDPAGE;
 use SIM;
 
-add_action('init', function () {
+add_action('init', __NAMESPACE__.'\blockInit');
+function blockInit() {
 	register_block_type(
 		__DIR__ . '/embedPage/build',
 		array(
@@ -16,7 +17,7 @@ add_action('init', function () {
 			'render_callback' => __NAMESPACE__.'\externalblock',
 		)
 	);
-});
+}
 
 function displayEmbedBlock($attributes){
 	$page	= json_decode($attributes['page']);

@@ -2,7 +2,8 @@
 namespace SIM\EMBEDPAGE;
 use SIM;
 
-add_action( 'rest_api_init', function () {
+add_action( 'rest_api_init', __NAMESPACE__.'\restApiInit');
+function restApiInit() {
     // query for posts
 	register_rest_route(
         RESTAPIPREFIX.'/embedpage',
@@ -36,7 +37,7 @@ add_action( 'rest_api_init', function () {
 			)
 		)
 	);
-});
+}
 
 function findPosts($wpRequest){
     $search = $wpRequest->get_param('search');
