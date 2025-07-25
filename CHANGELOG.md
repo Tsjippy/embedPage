@@ -4,11 +4,16 @@
 ### Added
 
 ### Changed
-- niceselect instatntiation
 
 ### Fixed
 
 ### Updated
+
+## [8.0.5] - 2025-07-25
+
+
+### Changed
+- niceselect instatntiation
 
 ## [8.0.4] - 2024-11-22
 
