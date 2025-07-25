@@ -47,9 +47,9 @@ tinymce.create(
             editor.addCommand('mceInsert_embed_shortcode',
                 function(){
                     dialog = editor.windowManager.open(pageEmbedDialog);
-                    var select						= document.querySelector('.wp-editor-help [name="page-selector"]');
-					NiceSelect.bind(select, {searchable: true});
-					var niceselect 					= select._niceselect.dropdown
+                    let select						= document.querySelector('.wp-editor-help [name="page-selector"]');
+					Main.NiceSelect(select, {searchable: true});
+					let niceselect 					= select._niceselect.dropdown
 					niceselect.style.position		= 'relative';
 					niceselect.style.width			= "200px";
 					niceselect.style.border			= '2px solid #303030';
