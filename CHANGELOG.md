@@ -6,9 +6,14 @@
 ### Changed
 
 ### Fixed
-- niceselect
 
 ### Updated
+
+## [8.0.7] - 2025-09-22
+
+
+### Fixed
+- niceselect
 
 ## [8.0.6] - 2025-08-06
 
