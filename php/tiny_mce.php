@@ -1,5 +1,5 @@
 <?php
-namespace SIM\FORMS;
+namespace SIM\EMBEDPAGE;
 use SIM;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -41,7 +41,7 @@ function addPlugin($plugins){
 		['html'=>SIM\pageSelect('page-selector')]
 	);
 
-	$plugins['insert_embed_shortcode']		= SIM\pathToUrl(MODULE_PATH."js/tiny_mce.js?ver=".MODULE_VERSION);
+	$plugins['insert_embed_shortcode']		= SIM\pathToUrl(PLUGINPATH."/js/tiny_mce.js?ver=".PLUGINVERSION);
 
 	return $plugins;
 }
