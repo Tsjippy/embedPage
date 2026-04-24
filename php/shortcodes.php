@@ -2,6 +2,10 @@
 namespace SIM\EMBEDPAGE;
 use SIM;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // make it possible to include a page in another page
 add_shortcode('embed_page', __NAMESPACE__.'\embedPost');
 function embedPost($atts){

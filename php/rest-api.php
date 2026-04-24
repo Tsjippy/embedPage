@@ -2,6 +2,10 @@
 namespace SIM\EMBEDPAGE;
 use SIM;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 add_action( 'rest_api_init', __NAMESPACE__.'\restApiInit');
 function restApiInit() {
     // query for posts

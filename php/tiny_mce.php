@@ -2,6 +2,10 @@
 namespace SIM\FORMS;
 use SIM;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 add_action('init', __NAMESPACE__.'\init');
 function init(){
 	global $wp_scripts;
