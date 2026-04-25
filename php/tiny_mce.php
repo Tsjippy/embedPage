@@ -41,7 +41,7 @@ function addPlugin($plugins){
 		['html'=>SIM\pageSelect('page-selector')]
 	);
 
-	$plugins['insert_embed_shortcode']		= SIM\pathToUrl(PLUGINPATH."/js/tiny_mce.js?ver=".PLUGINVERSION);
+	$plugins['insert_embed_shortcode']		= SIM\pathToUrl(PLUGINPATH."js/tiny_mce.js?ver=".PLUGINVERSION);
 
 	return $plugins;
 }
