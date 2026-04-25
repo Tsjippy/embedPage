@@ -4,14 +4,14 @@ use SIM;
 
 /**
  * Plugin Name:  		Tsjippy Embed a Page
- * Description:  		This plugin makes it possible to display the contents of another page in a page.<br>This can be done by using the frontend contend module or by using the 'embed_page' shortcode.<br>Use like this: <code>[embed_page id=SOMEPAGEID]</code>
+ * Description:  		This plugin makes it possible to display the contents of another page in a page.<br>This can be done by using the frontend contend plugin or by using the 'embed_page' shortcode.<br>Use like this: <code>[embed_page id=SOMEPAGEID]</code>
  * Version:      		1.0.0
  * Author:       		Ewald Harmsen
  * AuthorURI:			harmseninnigeria.nl
  * Requires at least:	6.3
  * Requires PHP: 		8.3
  * Tested up to: 		6.9
- * Plugin URI:			https://github.com/Tsjippy/comments/
+ * Plugin URI:			https://github.com/Tsjippy/embedpage/
  * Tested:				6.9
  * TextDomain:			tsjippy
  * License: GPLv2 or later
@@ -29,4 +29,4 @@ $pluginData = get_plugin_data(__FILE__, false, false);
 define(__NAMESPACE__ .'\PLUGIN', plugin_basename(__FILE__));
 define(__NAMESPACE__ .'\PLUGINPATH', __DIR__.'/');
 define(__NAMESPACE__ .'\PLUGINVERSION', $pluginData['Version']);
-define(__NAMESPACE__ .'\SETTINGS', get_option('sim_embedpage_settings', []));
+define(__NAMESPACE__ .'\SETTINGS', get_option('tsjippy_embedpage_settings', []));

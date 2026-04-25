@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-add_filter('sim_post_content', __NAMESPACE__.'\showFullscreen');
+add_filter('tsjippy_post_content', __NAMESPACE__.'\showFullscreen');
 function showFullscreen($postContent){
     // Check if content is just an hyperlink
     //find all urls in the page

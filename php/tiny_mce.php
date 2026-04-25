@@ -26,17 +26,17 @@ function init(){
 function addPlugin($plugins){
 	global $wp_scripts;
 	
-	if(!isset($wp_scripts->registered['sim_script'])){
+	if(!isset($wp_scripts->registered['tsjippy_script'])){
 		return $plugins;
 	}
 		
 	//Add extra variables to the main.js script
-	wp_localize_script( 'sim_script', 
+	wp_localize_script( 'tsjippy_script', 
 		'pageSelect', 
 		['html'=> SIM\pageSelect('page-selector')]
 	);
 
-	wp_localize_script( 'sim_admin_js', 
+	wp_localize_script( 'tsjippy_admin_js', 
 		'pageSelect', 
 		['html'=>SIM\pageSelect('page-selector')]
 	);
