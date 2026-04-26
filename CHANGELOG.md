@@ -8,6 +8,7 @@
 - main plugin name from sim-base to tsjippy-shared-functionality
 - plugin name
 - sim prefix to tsjippy prefix
+- base namespace to TSJIPPY
 
 ### Fixed
 - pluginpath constant
