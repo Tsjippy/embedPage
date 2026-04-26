@@ -9,6 +9,7 @@
 - plugin name
 - sim prefix to tsjippy prefix
 - base namespace to TSJIPPY
+- filternames to include tsjippy
 
 ### Fixed
 - pluginpath constant
