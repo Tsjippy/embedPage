@@ -8,7 +8,7 @@ import apiFetch from "@wordpress/api-fetch";
 const Edit = ({attributes, setAttributes}) => {
 	const { page, hide, newline, content } = attributes;
 
-	let noPostString	= __('Please select a page...', 'sim');
+	let noPostString	= __('Please select a page...', 'tsjippy');
 
 	let initialContent;
 
@@ -37,7 +37,7 @@ const Edit = ({attributes, setAttributes}) => {
 		setPageContent(	<Spinner /> );
 	
 		initialContent	= await apiFetch({
-			path: sim.restApiPrefix+'/embedpage/result',
+			path: tsjippy.restApiPrefix+'/embedpage/result',
 			method: 'POST',
 			data: { 
 				id: id,
@@ -60,7 +60,7 @@ const Edit = ({attributes, setAttributes}) => {
 			async function getResults(){
 				setResults( false );
 				const response = await apiFetch({
-					path: sim.restApiPrefix+'/embedpage/find',
+					path: tsjippy.restApiPrefix+'/embedpage/find',
 					method: 'POST',
 					data: { 
 						search: searchTerm
@@ -108,7 +108,7 @@ const Edit = ({attributes, setAttributes}) => {
 				onChange	= { (value) => PageSelected( value, parsedPage ) }
 				checked		= {true}
 			/>
-			<a href={`${sim.baseUrl}/wp-admin/post.php?post=${parsedPage.ID}&action=edit`}>Edit embeded page here</a><br></br><br></br>
+			<a href={`${tsjippy.baseUrl}/wp-admin/post.php?post=${parsedPage.ID}&action=edit`}>Edit embeded page here</a><br></br><br></br>
 			</>
 		)
 	}
@@ -127,7 +127,7 @@ const Edit = ({attributes, setAttributes}) => {
 			if ( !searchTerm ) {
 				return '';
 			}
-			return <div> {__('No search results', 'sim')}</div>;
+			return <div> {__('No search results', 'tsjippy')}</div>;
 		}
 		
 		return results?.map( ( p ) => {
@@ -155,7 +155,7 @@ const Edit = ({attributes, setAttributes}) => {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Page Embed Settings', 'sim' ) }>
+				<PanelBody title={ __( 'Page Embed Settings', 'tsjippy' ) }>
 					<CheckboxControl
 						label		= { __('Only show contents on hover') }
 						onChange	= { (checked) => VisibilityChanged(checked) }
@@ -169,7 +169,7 @@ const Edit = ({attributes, setAttributes}) => {
 					/>
 
 					< BuildCheckboxControls  />
-					<i>{__('Use searchbox below to search for a page', 'sim')}</i>
+					<i>{__('Use searchbox below to search for a page', 'tsjippy')}</i>
 					{ SearchPage(false) }
 				</PanelBody>
 			</InspectorControls>

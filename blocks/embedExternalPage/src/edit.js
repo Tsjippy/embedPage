@@ -17,7 +17,7 @@ const Edit = ({attributes, setAttributes}) => {
 			if(url == ''){
 				setEmbededPage(
 					<>
-					{ __('Please give an url', 'sim') }
+					{ __('Please give an url', 'tsjippy') }
 					{ UrlInput() }
 					</>
 				);
@@ -42,7 +42,7 @@ const Edit = ({attributes, setAttributes}) => {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Page Embed Settings', 'sim' ) }>
+				<PanelBody title={ __( 'Page Embed Settings', 'tsjippy' ) }>
 					{UrlInput}
 				</PanelBody>
 			</InspectorControls>
