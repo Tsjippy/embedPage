@@ -1,6 +1,6 @@
 <?php
-namespace SIM\EMBEDPAGE;
-use SIM;
+namespace TSJIPPY\EMBEDPAGE;
+use TSJIPPY;
 
 add_action('init', __NAMESPACE__.'\blockInit');
 function blockInit() {

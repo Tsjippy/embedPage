@@ -1,6 +1,6 @@
 <?php
-namespace SIM\EMBEDPAGE;
-use SIM;
+namespace TSJIPPY\EMBEDPAGE;
+use TSJIPPY;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -79,7 +79,7 @@ function displayPageContents($id, $collapsible=false, $linebreak=false){
         $oldQuery   = $wp_query;
         $wp_query   = new \WP_Query($args);
         $wp_query->is_embed = true;
-        $template           = SIM\getTemplateFile('', $type, $id[0]);
+        $template           = TSJIPPY\getTemplateFile('', $type, $id[0]);
 
         include_once($template);
 

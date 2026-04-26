@@ -1,6 +1,6 @@
 <?php
-namespace SIM\EMBEDPAGE;
-use SIM;
+namespace TSJIPPY\EMBEDPAGE;
+use TSJIPPY;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
