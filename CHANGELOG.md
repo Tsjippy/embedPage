@@ -2,17 +2,6 @@
 ## [Unreleased] - yyyy-mm-dd
 
 ### Added
-
-### Changed
-
-### Fixed
-
-### Updated
-
-## [10.0.1] - 2026-05-01
-
-
-### Added
 - trailing slash to pluginpath connstant
 
 ### Changed
@@ -29,6 +18,8 @@
 ### Fixed
 - pluginpath constant
 - github workflow
+
+### Updated
 
 ## [8.0.8] - 2025-10-13
 
