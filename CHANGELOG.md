@@ -13,6 +13,7 @@
 - block apt to version 3
 - PLUGINCONSTANT value
 - exclude .vscode from releases
+- updated github workflow versions
 
 ### Fixed
 - pluginpath constant
