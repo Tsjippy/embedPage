@@ -5,7 +5,7 @@ use TSJIPPY;
 /**
  * Plugin Name:  		Tsjippy Embed a Page
  * Description:  		This plugin makes it possible to display the contents of another page in a page.<br>This can be done by using the frontend contend plugin or by using the 'embed_page' shortcode.<br>Use like this: <code>[embed_page id=SOMEPAGEID]</code>
- * Version:      		10.0.0
+ * Version:      		10.0.1
  * Author:       		Ewald Harmsen
  * AuthorURI:			harmseninnigeria.nl
  * Requires at least:	6.3
