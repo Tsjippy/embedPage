@@ -17,6 +17,7 @@
 
 ### Fixed
 - pluginpath constant
+- github workflow
 
 ### Updated
 
