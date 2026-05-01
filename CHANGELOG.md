@@ -12,6 +12,7 @@
 - filternames to include tsjippy
 - block apt to version 3
 - PLUGINCONSTANT value
+- exclude .vscode from releases
 
 ### Fixed
 - pluginpath constant
